@@ -1,0 +1,55 @@
+    // belajar variable 
+	variableBoolean := true
+	variabelInt := 12
+	variableString := "hello world"
+	variabelArray := []int{1, 2, 3, 4, 5}
+	variableSlice := [...]int{0}
+	variableSlice[0] = 1
+	variabelMap := map[string]string{
+		"firstName" : "ilman teguh prasetya",
+	}
+
+    // belajar condition
+    isLogin := true
+	if isLogin {
+		fmt.Println("You are logged in")
+	} else {
+		fmt.Println("Salah")
+	}
+    //belajar looping
+    listBilangan := [...]int{
+		1, 2, 3, 4, 5,
+	}
+	for key, value := range listBilangan {
+		fmt.Println(key, value)
+	}
+    // belajar fuction 
+    func getAddition(inputOne int, inputTwo int) int {
+        return inputOne + inputTwo
+    }
+	// belajar module 
+	package modulmatematika
+
+type MatematikaStruct struct {
+	InputNumberOne int
+	InputNumberTwo int
+}
+
+func (matematikastruct MatematikaStruct) GetAddition() int {
+	return matematikastruct.InputNumberOne + matematikastruct.InputNumberTwo
+}
+func (matematikastruct MatematikaStruct) GetSubtraction() int {
+	return matematikastruct.InputNumberOne - matematikastruct.InputNumberTwo
+}
+	package main
+
+import (
+	modulmatematika "belajar-go-dasar/6-belajar-module/modul-matematika"
+	"fmt"
+)
+
+func main() {
+	resultAddtion := modulmatematika.MatematikaStruct{InputNumberOne: 2, InputNumberTwo: 3}
+	fmt.Println(resultAddtion.GetAddition())
+	fmt.Println(resultAddtion.GetSubtraction())
+}
