@@ -1,16 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"belajar-go-dasar/5-belajar-struct/moduleofstruct"
+	"fmt"
+)
 
-type MahasisStruct struct {
-	Nama string
-	Age  int
-}
-
-func (mahasisprop MahasisStruct) sayHello() {
-	fmt.Println("Hello, my name is", mahasisprop.Nama)
-}
 func main() {
-	mahasiswa := MahasisStruct{Nama: "ilman", Age : 23}
-	mahasiswa.sayHello()
+	tempStruct := moduleofstruct.MyStruct{}
+	myString := tempStruct.GetOfStruct()
+	fmt.Print(myString)
 }

@@ -3,19 +3,17 @@ package main
 import "fmt"
 
 func main() {
+	fmt.Println("hello world")
+	variabelString := "hello world"
+	variableInt := 12;
 	variableBoolean := true
-	variabelInt := 12
-	variableString := "hello world"
-	variabelArray := []int{1, 2, 3, 4, 5}
-	variableSlice := [...]int{0}
-	variableSlice[0] = 1
-	variabelMap := map[string]string{
-		"firstName" : "ilman teguh prasetya",
+	variableArray := [...]int{1,2,3,4,5}
+	variableMap := map[string]string{
+		"firstname" : "ilman teguh prasetya",
 	}
-	fmt.Println(variabelMap)
-	fmt.Print(variableSlice)
+	fmt.Println(variabelString)
+	fmt.Println(variableInt)
 	fmt.Println(variableBoolean)
-	fmt.Println(variabelInt)
-	fmt.Println(variableString)
-	fmt.Println(variabelArray)
+	fmt.Println(variableArray)
+	fmt.Println(variableMap)
 }

@@ -1,12 +1,10 @@
 package main
 
-import "fmt"
+import (
+	modulelooping "belajar-go-dasar/3-belajar-looping/module-looping"
+)
 
 func main() {
-	listBilangan := [...]int{
-		1, 2, 3, 4, 5,
-	}
-	for key, value := range listBilangan {
-		fmt.Println(key, value)
-	}
+	varArray:=[]int{1,2,3,4,5}
+	modulelooping.GetLooping(varArray)
 }
